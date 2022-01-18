@@ -1,0 +1,49 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+font-size: 2em;
+text-decoration: none;
+
+}
+
+li{
+    list-style:none;
+}
+
+.menu{
+    background-color: rgb(106, 161, 245);
+    height: 150px;
+    padding-top: 50px;
+    display:flex;
+   justify-content: space-around;
+  padding-inline-start: 0px;
+}
+
+ a{ 
+    color: rgb(248, 242, 242);
+    position: relative;
+    text-decoration: none;
+    display: inline-block;
+}
+
+ a::before{
+    
+    content: " ";
+    background-color: rgb(228, 86, 121);
+    width: 120px;
+    height: 3px;
+    position: absolute;
+    top: 100%;
+    left: 1%;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: 1s;
+    
+}
+
+.menu a:hover::before{
+   transform: scaleX(1);
+   transition: .5s;
+}
